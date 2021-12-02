@@ -54,6 +54,7 @@ app.post('/', async (req, res) => {
 })
 
 app.get('/status', (req,res) => {
+    console.log("i worked");
     let id = fs.readFileSync('output.txt', 'utf-8');
     return res.send({Id: id, Date: date});
 })
