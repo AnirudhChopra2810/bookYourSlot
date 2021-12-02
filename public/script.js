@@ -35,7 +35,7 @@ function reset() {
 
 function postData (name, email, message) {
     alert("A confirmation mail has been sent to your gmail, You can track your booking status through the provided link.")
-    const url = `http://${window.location.hostname}:3000`;
+    const url = `http://${window.location.hostname}`;
     axios.post(url, {name: name, email: email, message: message, date: Fecha_end_input.value})
     .then(response => {
         console.log(response);

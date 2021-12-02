@@ -62,7 +62,7 @@ function timer (date) {
 function getData (name, email, message) {
     
     let date = null;
-    const url = `http://${window.location.hostname}:3000/status`;
+    const url = `http://${window.location.hostname}/status`;
     axios.get(url)
     .then(response => {
         console.log(response)

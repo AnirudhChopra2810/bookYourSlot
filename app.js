@@ -13,6 +13,8 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs')
 app.use(express.json());
 app.use(express.urlencoded());
+    
+const port = process.env.PORT;
 
     const ID = uuidV4();
     let writerStream = fs.createWriteStream('output.txt');
@@ -77,6 +79,6 @@ app.get('/appointment/:room', async (req, res) => {
     res.render('appointment', {roomId: req.params.room});
 })
 
-server.listen(3000, () => {
+server.listen(port, () => {
     console.log('server running on the port: 3000');
 })
