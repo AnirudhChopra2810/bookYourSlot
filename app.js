@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
+app.use(cors());
 const nodemailer = require('nodemailer');
 const { resolve } = require('path');
 const { disconnect } = require('process');
