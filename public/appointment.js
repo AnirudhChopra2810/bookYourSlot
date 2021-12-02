@@ -1,4 +1,4 @@
-const socket = io('https://book-your-slot.herokuapp.com')
+const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
 var myPeer = new Peer(undefined, {
   secure: true, 
