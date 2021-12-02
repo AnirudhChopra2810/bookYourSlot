@@ -41,14 +41,14 @@ app.post('/', async (req, res) => {
         from: 'anirudhchpr100@gmail.com',
         to: req.body.email,
         subject: 'Slot Confirmation',
-        text: `Your slot is booked for the date ${req.body.date}, You can track the status of the meeting using following link: https://book-your-slot.herokuapp.com:${port}/status.html  `
+        text: `Your slot is booked for the date ${req.body.date}, You can track the status of the meeting using following link: https://book-your-slot.herokuapp.com/status.html  `
     });
 
     await transporter.sendMail({
         from: 'anirudhchpr100@gmail.com',
         to: 'chopraanirudh195@gmail.com',
         subject: 'Slot Confirmation',
-        text: `The slot is booked of the client dated ${req.body.date}, You can track the status of the meeting using following link: http://localhost:3000/status.html  `
+        text: `The slot is booked of the client dated ${req.body.date}, You can track the status of the meeting using following link:https://book-your-slot.herokuapp.com/status.html  `
     });
     console.log(req.body);
     date = req.body.date;
