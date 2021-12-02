@@ -51,7 +51,7 @@ function timer (date) {
      session_ended.style["color"] = "#48bb78";
      session_started.style['color'] = '#fff200';
      session_inProcess.style["color"] = '#fff200'; 
-    link.innerHTML = `PLEASE CLICK THE LINK TO START MEETING: ` + '<br></br>' + `<a href="http://${window.location.hostname}/appointment/${data.Id}" style="color: blue">http://${window.location.hostname}/appointment/${data.Id}</a>`;
+    link.innerHTML = `PLEASE CLICK THE LINK TO START MEETING: ` + '<br></br>' + `<a href="https://${window.location.hostname}/appointment/${data.Id}" style="color: blue">https://${window.location.hostname}/appointment/${data.Id}</a>`;
     document.getElementById("tracker").innerHTML = "Your Meeting Has Started";
   }
 }, 1000);
