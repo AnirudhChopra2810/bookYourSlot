@@ -18,8 +18,6 @@ let maxDate = y + '-' + "0"+(parseFloat(0+m) + 1) + '-' + d
 Fecha_end_input.setAttribute("min",minDate)
 Fecha_end_input.setAttribute("max",maxDate)
 
-
-
 form.addEventListener('submit', (event) => {
     event.preventDefault(); //prevents form from auto submision.
     let _name = document.getElementById('name').value;
