@@ -1,10 +1,9 @@
-const socket = io(`book-your-slot.herokuapp.com`)
+const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
-var peer = new Peer(undefined, {
-                secure: true, 
-                host: 'book-your-slot.herokuapp.com', 
-                port: 443,
-    });
+const myPeer = new Peer(undefined, {
+  host: '/',
+  port: '3001'
+})
 const myVideo = document.createElement('video')
 myVideo.muted = true
 const peers = {}
@@ -39,7 +38,7 @@ myPeer.on('open', id => {
 })
 
 function connectToNewUser(userId, stream) {
-  console.log(userId);
+  console.log(user)
   const call = myPeer.call(userId, stream)
   const video = document.createElement('video')
   call.on('stream', userVideoStream => {
