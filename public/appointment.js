@@ -1,6 +1,6 @@
 const socket = io(`book-your-slot.herokuapp.com`)
 const videoGrid = document.getElementById('video-grid')
-var peer = new Peer('someid', {
+var peer = new Peer(undefined, {
                 secure: true, 
                 host: 'book-your-slot.herokuapp.com', 
                 port: 443,
