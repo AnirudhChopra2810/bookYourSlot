@@ -1,4 +1,5 @@
 const form = document.getElementById('form');
+alert(form);
 let Fecha_end_input = document.getElementById("#Fecha_end")
 console.log(Fecha_end_input.value)
 
