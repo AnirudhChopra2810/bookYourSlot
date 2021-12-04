@@ -1,5 +1,6 @@
 
 getData();
+alert("iam on statis page");
 let session_started = document.getElementById('session_started');
 let session_inProcess = document.getElementById('session_in_process');
 let session_ended = document.getElementById('session_ended');
