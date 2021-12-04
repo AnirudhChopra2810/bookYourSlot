@@ -8,8 +8,10 @@ let y = n.getFullYear();
 let m = n.getMonth() + 1;
 let d = n.getDate();
 
-if(m < 10)
+if(m < 10){
    m = '0' + m.toString();
+   alert("i worked");
+}
 else if(d < 10)
    d = '0' + d.toString();
 
