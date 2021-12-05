@@ -1,5 +1,4 @@
 const form = document.getElementById('form');
-alert(form);
 let Fecha_end_input = document.getElementById("#Fecha_end")
 console.log(Fecha_end_input.value)
 
@@ -10,7 +9,6 @@ let d = n.getDate();
 
 if(m < 10){
    m = '0' + m.toString();
-   alert("i worked");
 }
 else if(d < 10)
    d = '0' + d.toString();
