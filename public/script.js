@@ -4,6 +4,7 @@ console.log(Fecha_end_input.value)
 
 let n =  new Date();
 let y = n.getFullYear();
+console.log(y);
 let m = n.getMonth() + 1;
 let d = n.getDate();
 
