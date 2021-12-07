@@ -4,9 +4,9 @@ console.log(Fecha_end_input.value)
 
 let n =  new Date();
 let y = n.getFullYear();
-console.log(y);
 let m = n.getMonth() + 1;
 let d = n.getDate();
+console.log("hello world");
 
 if(m < 10){
    m = '0' + m.toString();
@@ -14,11 +14,13 @@ if(m < 10){
 else if(d < 10)
    d = '0' + d.toString();
 
-let minDate = y + '' + m + '' + d
-let maxDate = y + '' + "0"+(parseFloat(0+m) + 1) + '' + d
+//y + '-' + m + '-' + d
+let minDate = moment().format(`${y}-${m}-${d}`);
+console.log(minDate);
+let maxDate = y + '-' + "0"+(parseFloat(0+m) + 1) + '-' + d;
 
-Fecha_end_input.setAttribute("min",minDate)
-Fecha_end_input.setAttribute("max",maxDate)
+Fecha_end_input.setAttribute("min",minDate);
+Fecha_end_input.setAttribute("max",maxDate);
 
 form.addEventListener('submit', (event) => {
     event.preventDefault(); //prevents form from auto submision.
