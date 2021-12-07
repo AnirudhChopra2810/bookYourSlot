@@ -83,5 +83,5 @@ app.get('/appointment/:room', async (req, res) => {
 })
 
 server.listen(port, () => {
-    console.log('server running on the port: 3000');
+    console.log(`server running on the port: ${port}`);
 })
