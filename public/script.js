@@ -13,8 +13,8 @@ if(m < 10){
 else if(d < 10)
    d = '0' + d.toString();
 
-let minDate = y + '-' + m + '-' + d
-let maxDate = y + '-' + "0"+(parseFloat(0+m) + 1) + '-' + d
+let minDate = y + '' + m + '' + d
+let maxDate = y + '' + "0"+(parseFloat(0+m) + 1) + '' + d
 
 Fecha_end_input.setAttribute("min",minDate)
 Fecha_end_input.setAttribute("max",maxDate)
