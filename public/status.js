@@ -12,6 +12,7 @@ console.log(data.Date);
 window.addEventListener('load', function(){
     if(!window.location.hash) {
         window.location = window.location + '#loaded';
+        console.log("hello")
         window.location.reload();
     }
 }
