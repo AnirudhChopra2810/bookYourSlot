@@ -22,7 +22,7 @@ console.log(minDate);
 // alert(maxDate);
 
 Fecha_end_input.setAttribute("min",minDate);
-Fecha_end_input.setAttribute("max",maxDate);
+// Fecha_end_input.setAttribute("max",maxDate);
 
 form.addEventListener('submit', (event) => {
     event.preventDefault(); //prevents form from auto submision.
