@@ -1,5 +1,5 @@
 const form = document.getElementById('form');
-let Fecha_end_input = document.querySelector("#Fecha_end");
+let Fecha_end_input = document.getElementById("#Fecha_end").setAttribute('min', " ");
 alert(Fecha_end_input.value);
 console.log(Fecha_end_input)
 
@@ -19,9 +19,7 @@ else if(d < 10)
 let minDate = y + '-' + m + '-' + d;
 alert(minDate);
 
-Fecha_end_input.min = minDate;
-
-// Fecha_end_input.setAttribute("min", `${minDate}`);
+Fecha_end_input.setAttribute("min", `${minDate}`);
 
 form.addEventListener('submit', (event) => {
     event.preventDefault(); //prevents form from auto submision.
