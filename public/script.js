@@ -39,15 +39,6 @@ function reset() {
     form.reset();
 }
 
-function getData(){
-    const url = `https://${window.location.hostname}/status`;
-    axios.get(url)
-    .then(response => {
-        console.log(response)
-    })
-    .catch(error => console.log(error))
-}
-
 function postData (name, email, message) {
     alert("A confirmation mail has been sent to your gmail, You can track your booking status through the provided link.")
     const url = `https://${window.location.hostname}`;
