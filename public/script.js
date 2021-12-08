@@ -3,8 +3,6 @@ let Fecha_end_input = document.getElementById("#Fecha_end");
 alert(Fecha_end_input.value);
 console.log(Fecha_end_input)
 
-getData();
-
 let n =  new Date();
 let y = n.getFullYear();
 let m = n.getMonth() + 1;
