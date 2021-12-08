@@ -3,6 +3,8 @@ let Fecha_end_input = document.getElementById("#Fecha_end");
 alert(Fecha_end_input.value);
 console.log(Fecha_end_input)
 
+getData();
+
 let n =  new Date();
 let y = n.getFullYear();
 let m = n.getMonth() + 1;
@@ -35,6 +37,15 @@ form.addEventListener('submit', (event) => {
 
 function reset() {
     form.reset();
+}
+
+function getData(){
+    const url = `https://${window.location.hostname}/status`;
+    axios.get(url)
+    .then(response => {
+        console.log(response)
+    })
+    .catch(error => console.log(error))
 }
 
 function postData (name, email, message) {
