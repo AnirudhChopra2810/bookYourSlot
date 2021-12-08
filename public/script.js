@@ -1,6 +1,7 @@
 const form = document.getElementById('form');
-let Fecha_end_input = document.getElementById("#Fecha_end")
-console.log(Fecha_end_input.value)
+let Fecha_end_input = document.getElementById("#Fecha_end");
+alert(Fecha_end_input);
+console.log(Fecha_end_input)
 
 let n =  new Date();
 let y = n.getFullYear();
@@ -17,12 +18,9 @@ else if(d < 10)
 //y + '-' + m + '-' + d
 let minDate = moment().format(`${y}-${m}-${d}`);
 alert(minDate);
-console.log(minDate);
-// // let maxDate = y + '-' + "0"+(parseFloat(0+m) + 1) + '-' + d;
-// alert(maxDate);
 
 Fecha_end_input.setAttribute("min",minDate);
-// Fecha_end_input.setAttribute("max",maxDate);
+
 
 form.addEventListener('submit', (event) => {
     event.preventDefault(); //prevents form from auto submision.
