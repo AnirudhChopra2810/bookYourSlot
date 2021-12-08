@@ -23,7 +23,7 @@ function timer (date) {
 
   let x = setInterval(function() {
   let now = new Date().getTime();
-  alert(now);
+  
     
   let timeLeft = countDownDate - now;
     
