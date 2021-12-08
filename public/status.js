@@ -10,8 +10,8 @@ console.log(data);
 console.log(data.Date);
 
 window.onload = function() {
-    eruda.init();
     if(!window.location.hash) {
+        eruda.init();
         window.location = window.location + '#loaded';
         window.location.reload();
     }
