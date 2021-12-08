@@ -10,6 +10,7 @@ console.log(data);
 console.log(data.Date);
 
 window.onload = function() {
+    eruda.init();
     if(!window.location.hash) {
         window.location = window.location + '#loaded';
         window.location.reload();
@@ -18,12 +19,10 @@ window.onload = function() {
 
 function timer (date) {
 
-    let countDownDate = new Date(`${data.Date} 00:10:00`).getTime();
-
+  let countDownDate = new Date(`${data.Date} 00:10:00`).getTime();
 
   let x = setInterval(function() {
   let now = new Date().getTime();
-  
     
   let timeLeft = countDownDate - now;
     
