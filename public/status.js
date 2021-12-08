@@ -34,6 +34,7 @@ function timer (date) {
 
   document.getElementById("timmer").innerHTML = days + "D : " + hours + "H : "
   + minutes + "M : " + seconds + "S ";
+  alert(document.getElementById("timmer").innerHTML);
 
 
     
