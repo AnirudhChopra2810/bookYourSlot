@@ -9,12 +9,13 @@ const data = JSON.parse(localStorage.getItem('data'))
 console.log(data);
 console.log(data.Date);
 
-window.onload = function() {
+window.addEventListener('load', function(){
     if(!window.location.hash) {
         window.location = window.location + '#loaded';
         window.location.reload();
     }
 }
+)
 
 function timer (date) {
 
