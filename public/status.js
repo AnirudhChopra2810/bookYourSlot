@@ -41,6 +41,7 @@ function timer (date) {
      session_started.style['color'] = '#fff200'; 
 
      if(timeLeft < 10 && timeLeft > 0){
+         console.log("i worked");
          location.reload();
      }
     
