@@ -19,7 +19,6 @@ window.onload = function() {
 function timer (date) {
 
     let countDownDate = new Date(`${data.Date} 00:10:00`).getTime();
-    console.log(countDownDate);
 
 
   let x = setInterval(function() {
