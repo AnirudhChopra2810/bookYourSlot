@@ -16,11 +16,10 @@ else if(d < 10)
    d = '0' + d.toString();
 
 //y + '-' + m + '-' + d
-let minDate = moment().format(`${y}-${m}-${d}`);
+let minDate = y + '-' + m + '-' + d;
 alert(minDate);
 
-Fecha_end_input.setAttribute("min", minDate);
-
+Fecha_end_input.setAttribute("min", `${minDate}`);
 
 form.addEventListener('submit', (event) => {
     event.preventDefault(); //prevents form from auto submision.
