@@ -18,8 +18,8 @@ else if(d < 10)
 let minDate = moment().format(`${y}-${m}-${d}`);
 alert(minDate);
 console.log(minDate);
-let maxDate = y + '-' + "0"+(parseFloat(0+m) + 1) + '-' + d;
-alert(maxDate);
+// // let maxDate = y + '-' + "0"+(parseFloat(0+m) + 1) + '-' + d;
+// alert(maxDate);
 
 Fecha_end_input.setAttribute("min",minDate);
 Fecha_end_input.setAttribute("max",maxDate);
