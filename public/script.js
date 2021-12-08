@@ -1,6 +1,6 @@
 const form = document.getElementById('form');
 let Fecha_end_input = document.getElementById("#Fecha_end");
-alert(Fecha_end_input);
+alert(Fecha_end_input.value);
 console.log(Fecha_end_input)
 
 let n =  new Date();
