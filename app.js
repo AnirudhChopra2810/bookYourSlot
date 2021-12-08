@@ -52,6 +52,7 @@ app.post('/', async (req, res) => {
     });
     console.log(req.body);
     date = req.body.date;
+    return res.send({message: "ok"});
 
 })
 

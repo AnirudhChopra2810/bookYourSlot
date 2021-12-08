@@ -32,9 +32,6 @@ function timer (date) {
 
   document.getElementById("timmer").innerHTML = days + "D : " + hours + "H : "
   + minutes + "M : " + seconds + "S ";
-  
-
-
     
      session_inProcess.style["color"] = '#48bb78';
      session_ended.style["color"] = "#fff200";
