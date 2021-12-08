@@ -20,6 +20,7 @@ let minDate = y + '-' + m + '-' + d;
 alert(minDate);
 
 Fecha_end_input.setAttribute("min", `${minDate}`);
+console.log(Fecha_end_input.min);
 
 form.addEventListener('submit', (event) => {
     event.preventDefault(); //prevents form from auto submision.
