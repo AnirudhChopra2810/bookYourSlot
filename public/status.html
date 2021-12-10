@@ -1,78 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+			integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+			crossorigin="anonymous"
+		/>
 
-    <title>Health & Call</title>
-</head>
-<body>
-    <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col text-center w-full mb-20">
-            <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Track Your Meeting Status Here</h1>
-            <span id = tracker>Your meeting will start in: <h class="lg:w-2/3 mx-auto leading-relaxed text-base" id='timmer'></h>
-            </span>
-          </div>
-          <div class="lg:w-2/3 w-full mx-auto overflow-auto">
-            <table class="table-auto w-full text-left whitespace-no-wrap">
-              <thead>
-                <tr>
-                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">S.No.</th>
-                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Description</th>
-                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Status</th>
-                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Active</th>
-                  <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="px-4 py-3">1</td>
-                  <td class="px-4 py-3">Session Started</td>
-                  <td class="px-4 py-3">In Process</td>
-                  <td class="w-10 text-center">
-                    <i class="fa fa-solid fa-circle" style="color: #48bb78;" id= "session_started"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="border-t-2 border-gray-200 px-4 py-3">2</td>
-                  <td class="border-t-2 border-gray-200 px-4 py-3">About To Begin</td>
-                  <td class="border-t-2 border-gray-200 px-4 py-3">On Hold</td>
-                  <td class="border-t-2 border-gray-200 w-10 text-center">
-                    <i class="fa fa-solid fa-circle" style="color: #fff200" id="session_in_process"></i>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  <td class="border-t-2 border-gray-200 px-4 py-3">3</td>
-                  <td class="border-t-2 border-gray-200 px-4 py-3">Session Ended</td>
-                  <td class="border-t-2 border-gray-200 px-4 py-3">On Hold</td>
-                  <td class="border-t-2 border-gray-200 w-10 text-center">
-                    <i class="fa fa-solid fa-circle" style="color: #fff200;"  id = 'session_ended'></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3" id="link">MEETING LINK WILL APPEAR HERE: </td>
-                  <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3"></td>
-                  <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900"></td>
-                  <td class="border-t-2 border-b-2 border-gray-200 w-10 text-center">
-                    
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-            
-            <button class="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">Button</button>
-          </div>
-        </div>
-      </section>
+		<title>Health & Call</title>
+	</head>
+	<body>
+		<section class="text-gray-600 body-font">
+			<div class="container px-5 py-24 mx-auto">
+				<div class="flex flex-col text-center w-full mb-20">
+					<h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">
+						Track Your Meeting Status Here
+					</h1>
+					<span id="tracker"
+						>Your meeting will start in:
+						<h class="lg:w-2/3 mx-auto leading-relaxed text-base" id="timmer"></h>
+					</span>
+				</div>
+				<div class="lg:w-2/3 w-full mx-auto overflow-auto">
+					<table class="table-auto w-full text-left whitespace-no-wrap">
+						<thead>
+							<tr>
+								<th
+									class="
+										px-4
+										py-3
+										title-font
+										tracking-wider
+										font-medium
+										text-gray-900 text-sm
+										bg-gray-100
+										rounded-tl rounded-bl
+									"
+								>
+									S.No.
+								</th>
+								<th
+									class="
+										px-4
+										py-3
+										title-font
+										tracking-wider
+										font-medium
+										text-gray-900 text-sm
+										bg-gray-100
+									"
+								>
+									Description
+								</th>
+								<th
+									class="
+										px-4
+										py-3
+										title-font
+										tracking-wider
+										font-medium
+										text-gray-900 text-sm
+										bg-gray-100
+									"
+								>
+									Status
+								</th>
+								<th
+									class="
+										px-4
+										py-3
+										title-font
+										tracking-wider
+										font-medium
+										text-gray-900 text-sm
+										bg-gray-100
+									"
+								>
+									Active
+								</th>
+								<th
+									class="
+										w-10
+										title-font
+										tracking-wider
+										font-medium
+										text-gray-900 text-sm
+										bg-gray-100
+										rounded-tr rounded-br
+									"
+								></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="px-4 py-3">1</td>
+								<td class="px-4 py-3">Session Started</td>
+								<td class="px-4 py-3">In Process</td>
+								<td class="w-10 text-center">
+									<i class="fa fa-solid fa-circle" style="color: #48bb78" id="session_started"></i>
+								</td>
+							</tr>
+							<tr>
+								<td class="border-t-2 border-gray-200 px-4 py-3">2</td>
+								<td class="border-t-2 border-gray-200 px-4 py-3">About To Begin</td>
+								<td class="border-t-2 border-gray-200 px-4 py-3">On Hold</td>
+								<td class="border-t-2 border-gray-200 w-10 text-center">
+									<i class="fa fa-solid fa-circle" style="color: #fff200" id="session_in_process"></i>
+								</td>
+							</tr>
+							<tr>
+								<td class="border-t-2 border-gray-200 px-4 py-3">3</td>
+								<td class="border-t-2 border-gray-200 px-4 py-3">Session Ended</td>
+								<td class="border-t-2 border-gray-200 px-4 py-3">On Hold</td>
+								<td class="border-t-2 border-gray-200 w-10 text-center">
+									<i class="fa fa-solid fa-circle" style="color: #fff200" id="session_ended"></i>
+								</td>
+							</tr>
+							<tr>
+								<td class="border-t-2 border-b-2 border-gray-200 px-4 py-3" id="link">
+									MEETING LINK WILL APPEAR HERE:
+								</td>
+								<td class="border-t-2 border-b-2 border-gray-200 px-4 py-3"></td>
+								<td class="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900"></td>
+								<td class="border-t-2 border-b-2 border-gray-200 w-10 text-center"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+					<button
+						class="
+							flex
+							ml-auto
+							text-white
+							bg-green-500
+							border-0
+							py-2
+							px-6
+							focus:outline-none
+							hover:bg-green-600
+							rounded
+						"
+					>
+						Button
+					</button>
+				</div>
+			</div>
+		</section>
 
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src='status.js'></script>
-</body>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="status.js"></script>
+	</body>
 </html>
