@@ -24,7 +24,7 @@ writerStream.write(ID, 'utf-8');
 
 app.post('/', async (req, res) => {
 	console.log(req);
-	//please put your gmail credentials here for testing.
+	//please put your gmail credentials here for testing
 	const transporter = nodemailer.createTransport({
 		host: 'smtp.gmail.com',
 		port: 587,
