@@ -24,6 +24,7 @@ writerStream.write(ID, 'utf-8');
 
 app.post('/', async (req, res) => {
 	console.log(req);
+	//please put your gmail credentials here for testing.
 	const transporter = nodemailer.createTransport({
 		host: 'smtp.gmail.com',
 		port: 587,
@@ -31,13 +32,13 @@ app.post('/', async (req, res) => {
 		requireTLS: true,
 		port: 587,
 		auth: {
-			user: 'anirudhchpr100@gmail.com',
-			pass: 'test@1234'
+			user: '',
+			pass: ''
 		}
 	});
 
 	await transporter.sendMail({
-		from: 'anirudhchpr100@gmail.com',
+		from: '',
 		to: req.body.email,
 		subject: 'Slot Confirmation',
 		text: `Your slot is booked for the date ${req.body.date}, You can track the status of the meeting using following link: https://book-your-slot.herokuapp.com/status.html  `
