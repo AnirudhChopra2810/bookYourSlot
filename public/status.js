@@ -7,7 +7,6 @@ console.log(localStorage.getItem('data'));
 const data = JSON.parse(localStorage.getItem('data'));
 console.log(data);
 console.log(data.Date);
-
 window.addEventListener('load', function () {
 	if (!window.location.hash) {
 		window.location = window.location + '#loaded';
@@ -49,7 +48,7 @@ function timer(date) {
 			link.innerHTML =
 				`PLEASE CLICK THE LINK TO START MEETING: ` +
 				'<br></br>' +
-				`<a href="https://${window.location.hostname}/appointment/${data.Id}" style="color: blue">https://${window.location.hostname}/appointment/${data.Id}</a>`;
+				`<a href="http://${window.location.hostname}:3000/appointment/${data.Id}" style="color: blue">https://${window.location.hostname}:3000/appointment/${data.Id}</a>`;
 			document.getElementById('tracker').innerHTML = 'Your Meeting Has Started';
 		}
 	}, 1000);
@@ -57,7 +56,7 @@ function timer(date) {
 
 function getData(name, email, message) {
 	let date = null;
-	const url = `https://${window.location.hostname}/status`;
+	const url = `http://${window.location.hostname}:3000/status`;
 	axios
 		.get(url)
 		.then((response) => {
